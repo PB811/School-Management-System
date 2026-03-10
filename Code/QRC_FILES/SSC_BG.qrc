@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="Splash_Screen_BG">
+    <file>Pictures/Logo.jpg</file>
+  </qresource>
+</RCC>

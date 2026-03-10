@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="TB2_BG">
+    <file>Pictures/password_bg.jpg</file>
+  </qresource>
+</RCC>

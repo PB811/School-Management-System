@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="PIC">
+    <file>../Pictures/TB_PIC.png</file>
+    <file>../Pictures/BG.jpg</file>
+    <file>../Pictures/Main_logo.jpg</file>
+  </qresource>
+</RCC>

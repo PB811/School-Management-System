@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="LABEL_UI">
+    <file>Pictures/Logo.jpg</file>
+  </qresource>
+</RCC>

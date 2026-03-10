@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  sms:
+    build: .
+    image: school-management-system
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - sms_data:/app/Code/sms_data
+    network_mode: host
+    restart: unless-stopped
+
+volumes:
+  sms_data:

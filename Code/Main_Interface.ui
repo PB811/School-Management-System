@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SMS_Main_Interface</class>
+ <widget class="QMainWindow" name="SMS_Main_Interface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1920</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Consolas</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>School Management System</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="QRC_FILES/Main Interface/SMS_Main_I_Logo.qrc">
+    <normaloff>:/LOGO/Pictures/Main_logo.jpg</normaloff>:/LOGO/Pictures/Main_logo.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextBesideIcon</enum>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QCalendarWidget" name="calendarWidget">
+    <property name="geometry">
+     <rect>
+      <x>1540</x>
+      <y>340</y>
+      <width>392</width>
+      <height>239</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAdd_New_Student">
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="tearOffEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuStudent">
+    <property name="title">
+     <string>Students</string>
+    </property>
+    <addaction name="actionAdd_New_Student"/>
+    <addaction name="separator"/>
+    <addaction name="actionManage_Existing_Students"/>
+    <addaction name="separator"/>
+    <addaction name="actionUpdate_Student_Records"/>
+   </widget>
+   <widget class="QMenu" name="menuTeachers">
+    <property name="title">
+     <string>Teachers</string>
+    </property>
+    <addaction name="actionAdd_New_Teacher"/>
+    <addaction name="separator"/>
+    <addaction name="actionManage_Existing_Teachers"/>
+    <addaction name="separator"/>
+    <addaction name="actionUpdate_Teacher_Records"/>
+   </widget>
+   <widget class="QMenu" name="menuStaff">
+    <property name="title">
+     <string>Staff</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuFees">
+    <property name="title">
+     <string>Fees</string>
+    </property>
+    <addaction name="actionAdd_New_Staff"/>
+    <addaction name="separator"/>
+    <addaction name="actionManage_Existing_Staff"/>
+    <addaction name="separator"/>
+    <addaction name="actionManage_Staff_Records"/>
+   </widget>
+   <widget class="QMenu" name="menuAssessmenets">
+    <property name="title">
+     <string>Assessments</string>
+    </property>
+    <addaction name="actionPrint_Report_Cards"/>
+    <addaction name="actionManage_Assessments"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuExit">
+    <property name="title">
+     <string>Exit</string>
+    </property>
+   </widget>
+   <addaction name="menuAdd_New_Student"/>
+   <addaction name="menuStudent"/>
+   <addaction name="menuTeachers"/>
+   <addaction name="menuStaff"/>
+   <addaction name="menuFees"/>
+   <addaction name="menuAssessmenets"/>
+   <addaction name="menuAbout"/>
+   <addaction name="menuExit"/>
+  </widget>
+  <action name="actionAdd_New_Student">
+   <property name="text">
+    <string>Add New Student</string>
+   </property>
+  </action>
+  <action name="actionManage_Existing_Students">
+   <property name="text">
+    <string>Manage Existing Students</string>
+   </property>
+  </action>
+  <action name="actionAdd_New_Teacher">
+   <property name="text">
+    <string>Add New Teacher</string>
+   </property>
+  </action>
+  <action name="actionManage_Existing_Teachers">
+   <property name="text">
+    <string>Manage Existing Teachers</string>
+   </property>
+  </action>
+  <action name="actionAdd_New_Staff">
+   <property name="text">
+    <string>Add New Staff</string>
+   </property>
+  </action>
+  <action name="actionManage_Existing_Staff">
+   <property name="text">
+    <string>Manage Existing Staff</string>
+   </property>
+  </action>
+  <action name="actionManage_Staff_Records">
+   <property name="text">
+    <string>Manage Staff Records</string>
+   </property>
+  </action>
+  <action name="actionPrint_Report_Cards">
+   <property name="text">
+    <string>Print Report Cards</string>
+   </property>
+  </action>
+  <action name="actionManage_Assessments">
+   <property name="text">
+    <string>Manage Assessments</string>
+   </property>
+  </action>
+  <action name="actionUpdate_Student_Records">
+   <property name="text">
+    <string>Update Student Records</string>
+   </property>
+  </action>
+  <action name="actionUpdate_Teacher_Records">
+   <property name="text">
+    <string>Update Teacher Records</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="QRC_FILES/Main Interface/SMS_Main_I_Logo.qrc"/>
+ </resources>
+ <connections/>
+</ui>

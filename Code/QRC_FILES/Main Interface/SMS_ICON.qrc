@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="ICONS">
+    <file>../Pictures/SMS_ABOUT_P.png</file>
+    <file>../Pictures/subjects.png</file>
+    <file>../Pictures/students.png.webp</file>
+    <file>../Pictures/users.webp</file>
+    <file>../Pictures/manage staff.png</file>
+    <file>../Pictures/staff.png</file>
+    <file>../Pictures/add teacher.png</file>
+    <file>../Pictures/MANAGE_STUDENT_P.png</file>
+    <file>../Pictures/ADD_STUDENT_P.png</file>
+    <file>../Pictures/ADD_STUDENT_PIC.png</file>
+  </qresource>
+</RCC>

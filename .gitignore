@@ -1,0 +1,32 @@
+# Documentation (to be added later)
+*.pdf
+*.docx
+~$*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+Code/.venv/
+.venv/
+
+# Build outputs
+build/
+dist/
+*.egg-info/
+*.spec
+
+# Runtime / generated files
+Code/sms.db
+Code/*.dat
+
+# Old / temp code
+Code/Build Code/
+Code/New folder/
+Code/Temp/
+Code/Process/
+
+# Local dev config
+.claude/

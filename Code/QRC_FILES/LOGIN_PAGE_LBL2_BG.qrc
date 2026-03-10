@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="LABEL_BG">
+    <file>Pictures/Login_C.jpg</file>
+  </qresource>
+</RCC>

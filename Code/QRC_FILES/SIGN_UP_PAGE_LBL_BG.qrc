@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="LBL_BG">
+    <file>Pictures/Logo.jpg</file>
+  </qresource>
+</RCC>

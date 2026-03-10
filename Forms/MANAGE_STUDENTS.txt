@@ -1,0 +1,298 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'MANAGE_STUDENTS.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.2
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+#import MANAGE_STUDENT_B_BG_rc
+#import MANAGE_STUDENT_LOGO_rc
+#import MANAGE_STUDENT_TB_BG_rc
+from QRC_FILES import MANAGE_STUDENT_B_BG, MANAGE_STUDENT_TB_BG, MANAGE_STUDENT_LOGO
+from ADD_NEW_STUDENT import *
+import sys
+import mysql.connector
+
+mydb = mysql.connector.connect(host = "localhost", user = "root", password = "ilkr1475")
+if mydb.is_connected():
+     print("Successfully Connected")
+MNS_CURSOR = mydb.cursor()
+
+class Ui_Manage_Students(object):
+    global icon
+    def setup_manage_students(self, Manage_Students):
+        Manage_Students.setObjectName("Manage_Students")
+        global icon
+        Manage_Students.resize(1428, 750)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(Manage_Students.sizePolicy().hasHeightForWidth())
+        Manage_Students.setSizePolicy(sizePolicy)
+        Manage_Students.setMaximumSize(QtCore.QSize(1428, 750))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        Manage_Students.setFont(font)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/BG/Pictures/Main_logo.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Manage_Students.setWindowIcon(icon)
+        Manage_Students.setStyleSheet("background-color: rgb(0, 0, 0);")
+        Manage_Students.setUnifiedTitleAndToolBarOnMac(True)
+        self.centralwidget = QtWidgets.QWidget(Manage_Students)
+        self.centralwidget.setObjectName("centralwidget")
+        self.tableWidget = QtWidgets.QTableWidget(self.centralwidget)
+        self.tableWidget.setGeometry(QtCore.QRect(30, 90, 1371, 541))
+        self.tableWidget.setStyleSheet("background-color: rgb(227, 227, 227);")
+        self.tableWidget.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.tableWidget.setFrameShadow(QtWidgets.QFrame.Plain)
+        self.tableWidget.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
+        self.tableWidget.setGridStyle(QtCore.Qt.SolidLine)
+        self.tableWidget.setColumnCount(10)
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setRowCount(0)
+        self.tableWidget.setEditTriggers(QtWidgets.QTableWidget.NoEditTriggers)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(3, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(4, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(5, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(6, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(7, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(8, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        item.setFont(font)
+        self.tableWidget.setHorizontalHeaderItem(9, item)
+        self.tableWidget.cellClicked.connect(self.cell_clicked)
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setGeometry(QtCore.QRect(30, 40, 1371, 31))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
+        self.lineEdit.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        self.lineEdit.setFont(font)
+        self.lineEdit.setFocusPolicy(QtCore.Qt.StrongFocus)
+        self.lineEdit.setStyleSheet("background-image: url(:/BG/Pictures/TB_PIC.png);")
+        self.lineEdit.setInputMethodHints(QtCore.Qt.ImhPreferLowercase|QtCore.Qt.ImhPreferNumbers|QtCore.Qt.ImhPreferUppercase|QtCore.Qt.ImhSensitiveData)
+        self.lineEdit.setFrame(False)
+        self.lineEdit.setPlaceholderText("Search")
+        self.lineEdit.setClearButtonEnabled(False)
+        self.lineEdit.setObjectName("lineEdit")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(50, 650, 301, 71))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        self.pushButton.setFont(font)
+        self.pushButton.setFocusPolicy(QtCore.Qt.TabFocus)
+        self.pushButton.setStyleSheet("background-image: url(:/BG/Pictures/BG.jpg);")
+        self.pushButton.setDefault(False)
+        self.pushButton.setFlat(False)
+        self.pushButton.setObjectName("pushButton")
+        self.pushButton.clicked.connect(self.ans_open)
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(400, 650, 301, 71))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        self.pushButton_2.setFont(font)
+        self.pushButton_2.setFocusPolicy(QtCore.Qt.TabFocus)
+        self.pushButton_2.setStyleSheet("background-image: url(:/BG/Pictures/BG.jpg);")
+        self.pushButton_2.setDefault(False)
+        self.pushButton_2.setFlat(False)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_2.clicked.connect(self.Load_db)
+        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_3.setGeometry(QtCore.QRect(740, 650, 301, 71))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(9)
+        self.pushButton_3.setFont(font)
+        self.pushButton_3.setFocusPolicy(QtCore.Qt.TabFocus)
+        self.pushButton_3.setStyleSheet("background-image: url(:/BG/Pictures/BG.jpg);")
+        self.pushButton_3.setDefault(False)
+        self.pushButton_3.setFlat(False)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.pushButton_3.clicked.connect(self.delete_selected_student)
+        self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_4.setGeometry(QtCore.QRect(1080, 650, 301, 71))
+        font = QtGui.QFont()
+        font.setFamily("Consolas")
+        font.setPointSize(10)
+        self.pushButton_4.setFont(font)
+        self.pushButton_4.setFocusPolicy(QtCore.Qt.TabFocus)
+        self.pushButton_4.setStyleSheet("background-image: url(:/BG/Pictures/BG.jpg);")
+        self.pushButton_4.setDefault(False)
+        self.pushButton_4.setFlat(False)
+        self.pushButton_4.setObjectName("pushButton_4")
+        Manage_Students.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(Manage_Students)
+        QtCore.QMetaObject.connectSlotsByName(Manage_Students)
+
+    def retranslateUi(self, Manage_Students):
+        _translate = QtCore.QCoreApplication.translate
+        Manage_Students.setWindowTitle(_translate("Manage_Students", "Manage Students"))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("Manage_Students", "Registration ID"))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("Manage_Students", "First Name"))
+        item = self.tableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("Manage_Students", "Last Name"))
+        item = self.tableWidget.horizontalHeaderItem(3)
+        item.setText(_translate("Manage_Students", "Gender"))
+        item = self.tableWidget.horizontalHeaderItem(4)
+        item.setText(_translate("Manage_Students", "Age"))
+        item = self.tableWidget.horizontalHeaderItem(5)
+        item.setText(_translate("Manage_Students", "Address"))
+        item = self.tableWidget.horizontalHeaderItem(6)
+        item.setText(_translate("Manage_Students", "Contact"))
+        item = self.tableWidget.horizontalHeaderItem(7)
+        item.setText(_translate("Manage_Students", "Email ID"))
+        item = self.tableWidget.horizontalHeaderItem(8)
+        item.setText(_translate("Manage_Students", "Grade"))
+        item = self.tableWidget.horizontalHeaderItem(9)
+        item.setText(_translate("Manage_Students", "Section"))
+        self.pushButton.setText(_translate("Manage_Students", "Add New Student(s)"))
+        self.pushButton_2.setText(_translate("Manage_Students", "Refresh List"))
+        self.pushButton_3.setText(_translate("Manage_Students", "Delete Selected Student"))
+        self.pushButton_4.setText(_translate("Manage_Students", "Update Record"))
+
+    
+    def Load_db(self):
+    	self.tableWidget.setRowCount(0)
+    	MNS_CURSOR.execute("use sms")
+    	MNS_CURSOR.execute("select *from students")
+    	records = MNS_CURSOR.fetchall()
+    	print(records)
+    	for row_number, row_record in enumerate(records):
+    		self.tableWidget.insertRow(row_number)
+    		for column_number, column_data in enumerate(row_record):
+    			self.tableWidget.setItem(row_number, column_number, QtWidgets.QTableWidgetItem(str(column_data)))
+
+    def ans_open(self):
+    	self.window = QtWidgets.QMainWindow()
+    	self.ui = Ui_Add_New_Student()
+    	self.ui.setup_add_new_student_ui(self.window)
+    	self.window.show()
+
+    def delete_selected_student(self):
+    	global icon
+    	selected_Id = self.tableWidget.currentItem().text()
+    	current_column = self.tableWidget.currentColumn()
+    	current_row = self.tableWidget.currentRow()
+    	msg = QtWidgets.QMessageBox()
+    	control = 0
+    	try:
+    		del_ID = int(selected_Id)
+    		control += 1
+    		if current_column != 0:
+    			pass
+    		else:
+    			control += 1
+    	except Exception as e:
+    		if selected_Id == None and current_column == None:
+    			msg.setText("Please select an ID to delete the student's record")
+    			msg.setWindowIcon(icon)
+    			msg.setIcon(QtWidgets.QMessageBox.Information)
+    			msg.setWindowTitle("School Management System")
+    			msg.exec_()
+    		else:
+    			msg.setText("Error! Please select an ID to delete the student's record")
+    			msg.setWindowIcon(icon)
+    			msg.setIcon(QtWidgets.QMessageBox.Warning)
+    			msg.setWindowTitle("School Management System")
+    			msg.exec_()
+
+    	print(control)
+    	if control == 2:
+    		if type(del_ID) == int and current_column == 0:
+    			print("Hello World")
+    			MNS_CURSOR.execute("use sms")
+    			MNS_CURSOR.execute(f"delete from students where Registration_Number = {int(del_ID)}")
+    			mydb.commit()
+    			self.tableWidget.removeRow(current_row)
+    			msg.setText("Student Record Successfully Deleted!")
+    			msg.setWindowTitle("School Management System")
+    			msg.setIcon(QtWidgets.QMessageBox.Information)
+    			msg.setWindowIcon(icon)
+    			msg.exec_()
+    	elif control == 1:
+    		msg.setText("Error! Please select an ID to delete the student's record")
+    		msg.setWindowIcon(icon)
+    		msg.setIcon(QtWidgets.QMessageBox.Warning)
+    		msg.setWindowTitle("School Management System")
+    		msg.exec_()   			
+
+
+    def cell_clicked(self):
+    	selected_Id = self.tableWidget.currentItem().text()
+    	current_column = self.tableWidget.currentColumn()
+    	try:
+    		del_ID = int(selected_Id)
+    	except Exception as e:
+    		pass
+
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    Manage_Students = QtWidgets.QMainWindow()
+    ui = Ui_Manage_Students()
+    ui.setup_manage_students(Manage_Students)
+    Manage_Students.show()
+    sys.exit(app.exec_())
