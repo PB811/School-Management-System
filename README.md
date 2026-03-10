@@ -1,6 +1,6 @@
 # School Management System
 
-A desktop School Management System built with **Python + PyQt5**, created as a school project by Prathamesh Bheeemanathi.
+A desktop School Management System built with **Python + PyQt5**, created as a school project by me. I made this in school, so it may not follow all the best practices, infact it doesn't folllo any best practice. I just managed to get this done:)
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue) ![PyQt5](https://img.shields.io/badge/GUI-PyQt5-green) ![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey) ![Platform](https://img.shields.io/badge/Platform-Windows-blue)
 
